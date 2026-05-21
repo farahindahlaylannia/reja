@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #5fa8ff, #d6ebff);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.opening {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opening-box {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  padding: 60px;
+  border-radius: 35px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.opening-box h1 {
+  font-size: 60px;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 20px;
+}
+
+.opening-box button {
+  margin-top: 25px;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: #4a8eff;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.book {
+  width: 95%;
+  max-width: 1300px;
+  min-height: 750px;
+  background: #f8f0e7;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.book::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: #555;
+  transform: translateX(-50%);
+}
+
+.page {
+  display: none;
+  width: 100%;
+  min-height: 750px;
+}
+
+.page.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left-page,
+.right-page {
+  padding: 40px;
+  position: relative;
+}
+
+.left-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-page img {
+  width: 220px;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 10px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.collage {
+  position: relative;
+}
+
+.small {
+  position: absolute;
+}
+
+.rotate1 {
+  top: 70px;
+  left: 60px;
+  transform: rotate(-8deg);
+}
+
+.rotate2 {
+  top: 250px;
+  left: 250px;
+  transform: rotate(7deg);
+}
+
+.rotate3 {
+  top: 430px;
+  left: 120px;
+  transform: rotate(-5deg);
+}
+
+.right-page {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  border-left: 2px dashed rgba(0,0,0,0.1);
+}
+
+.right-page h2 {
+  font-size: 55px;
+  font-family: 'Caveat', cursive;
+  color: #3b6fcf;
+  margin-bottom: 25px;
+}
+
+.right-page p {
+  font-size: 18px;
+  line-height: 2.1;
+  color: #333;
+}
+
+.controls {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.controls button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: #4a8eff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.music-player {
+  margin-top: 30px;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 25px;
+  width: 400px;
+  text-align: center;
+}
+
+.music-player p {
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+audio {
+  width: 100%;
+}
+
+.decor {
+  position: absolute;
+  font-size: 45px;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.decor-bike {
+  top: 20px;
+  left: 30px;
+}
+
+.decor-star {
+  bottom: 30px;
+  right: 40px;
+}
+
+.decor-shell {
+  top: 20px;
+  right: 30px;
+}
+
+.decor-wave {
+  bottom: 40px;
+  left: 30px;
+}
+
+.decor-food {
+  top: 25px;
+  left: 40px;
+}
+
+.decor-drink {
+  bottom: 30px;
+  right: 35px;
+}
+
+.decor-blue {
+  top: 30px;
+  left: 35px;
+}
+
+.decor-cloud {
+  bottom: 40px;
+  right: 30px;
+}
+
+.decor-heart {
+  top: 20px;
+  right: 30px;
+}
+
+.decor-flower {
+  bottom: 30px;
+  left: 40px;
+}
+
+.ninja-theme {
+  background: linear-gradient(135deg, #f4f4f4, #dbe2ea);
+}
+
+.beach-theme {
+  background: linear-gradient(135deg, #ffe7b8, #b7ecff);
+}
+
+.food-theme {
+  background: linear-gradient(135deg, #fff0d6, #ffd4c7);
+}
+
+.blue-theme {
+  background: linear-gradient(135deg, #d8ecff, #8fc7ff);
+}
+
+.romantic-theme {
+  background: linear-gradient(135deg, #ffe1ef, #ffd0dc);
+}
+
+@media(max-width: 1000px) {
+
+  .page.active {
+    grid-template-columns: 1fr;
+  }
+
+  .book {
+    min-height: auto;
+  }
+
+  .page {
+    min-height: auto;
+  }
+
+  .right-page h2 {
+    font-size: 40px;
+  }
+
+  .left-page img {
+    width: 170px;
+  }
+
+}
